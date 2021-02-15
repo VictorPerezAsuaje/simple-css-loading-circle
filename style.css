@@ -1,0 +1,38 @@
+.loading{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .circle{
+    min-height: 100px;
+    width: 100px;
+    border: 20px solid #000624;
+    border-top-color: #00d4ff;
+    border-radius: 100px;
+    animation: rotation 3s linear infinite;
+  }
+  
+  .text{
+    font-size:24px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image:linear-gradient(to right, #000624 30%, #00d4ff 40%, #000624 50%);
+    background-size: 500%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: loading-text 3s infinite;
+  }
+  
+  @keyframes rotation {
+    0%{transform: rotate(0deg);}  
+    100% {transform: rotate(-360deg);}
+  }
+  
+  @keyframes loading-text{
+    0%{background-position: right;}
+    100%{background-position: left;}
+  }
